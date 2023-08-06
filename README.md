@@ -2,7 +2,7 @@
 ## Join CTT @ https://discord.gg/CTT
 
 ## Section 1: OBS
-What's OBS?
+### What's OBS?
 
 Open Broadcaster Software is a program you can use to record and stream applications. 
 
@@ -12,7 +12,7 @@ Install OBS using OBS-Studio-Full-Installer-x64.exe: https://github.com/obsproje
 
 There is no reason to use OBS 25.0.8 anymore, (there used to be claims newer versions caused frames halving when recording at a High FPS) - s/o Tellinq 
 
-Automated settings script
+### Automated settings script:
 
 This script can optimize (or make a new) OBS profile with all the relevant settings for high FPS recording tuned, with settings for all PCs:
 
@@ -32,29 +32,29 @@ Change NVENC to AMF if you have an AMD GPU.
 
 blur is a free, faster and open source alternative to frame blending/resampling  and FFmpeg's T-mix.
 
-Installing blur:
+### Installing blur:
 
 blur can be installed manually thru this URL: https://github.com/f0e/blur/releases/latest/download/blur-installer.exe 
 
-Features:
+### Features:
 
-Resample:
+#### Resample:
 
 You can render your videos, just like T-mix or like if you opened Vegas, dropped a clip and rendered it to 60FPS, except that it's much faster, especially when resampling high FPS (240+)
 
-Interpolation:
+#### Interpolation:
 
 There's also the possibility of interpolating your videos with SVPFlow (which is uncomparably faster than Flowframes RIFE). It's only downside is that the frames it creates are less accurate (recommended input FPS: 160-240minimum). The higher your clips' original FPS, the less artifacts you'll get and the faster speed preset you can use to trade accuracy for speed, in it's config you can set "interpolation speed" to medium, fast or faster. RIFE implementation is still WIP
 
-Frame deduplication:
+#### Frame deduplication:
 
 Since blur v1.8 there's a setting in the blur-config that's turned off by default called deduplicate, if you turn it on it'll look for duplicated frames (caused by FPS spikes / slight encoding lag) and try to fill in the gaps with interpolation. 
 
-blur config explained:
+### blur config explained:
 
 If a setting isn't mentioned here, it's not relevant to be tuned except if you feel like it
 
-blur:
+#### blur:
 
 blur - whether or not the output video file will be blurred
 
@@ -62,7 +62,7 @@ amount - if blur is enabled, this is the amount of motion blur (0 = no blur, 1 =
 
 output fps - if blur is enabled, this is the fps the output video will be
 
-interpolation:
+#### interpolation:
 
 interpolate - whether or not the input video file will be interpolated to a higher fps
 
@@ -74,7 +74,7 @@ interpolation tuning - default is 'weak'
 
 interpolation algorithm - default is '23'
 
-rendering:
+#### rendering:
 
 gpu - enables gpu accelerated rendering (likely faster, test for yourself)
 
@@ -82,7 +82,7 @@ deduplicate - removes duplicate frames and generates new interpolated frames to 
 
 custom ffmpeg filters - custom ffmpeg flags (video filters and encoding args)
 
-Custom FFmpeg output:
+### Custom FFmpeg output:
 
 If you care about your render time, videos' size/quality, you can efficiently compress your videos with custom FFmpeg settings, here's a few of them to start off with:
 
@@ -104,9 +104,9 @@ same thing:
 
 HEVC might not work at all on older cards / if you have some old drivers
 
-##Section 3: Optimization Guides
+## Section 3: Optimization Guides
 
-Guides that talk about latency / both software & hardware :
+### Guides that talk about latency / both software & hardware :
 
 ⭐ Zusier's Archive https://github.com/Zusier/archive
 
